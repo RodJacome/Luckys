@@ -9,7 +9,7 @@ export const AdoptionData = [
   },
   {
     id: "2",
-    picture: "/common/animals/dogs/peluchin.jpeg",
+    picture: "/common/animals/dogs/tiger.jpeg",
     name: "Virolo",
     raza: "Cruzado",
     tamaño: "Mediano",
