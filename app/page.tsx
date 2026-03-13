@@ -1,28 +1,29 @@
 import { AdoptionCard } from "./components/animalCard/adoptionCard";
 import { AdoptionData } from "./components/data/adoptionData";
+import { HomeImage } from "./components/homeImage/homeImage";
+import { NavBar } from "./components/navBar/navBar";
 
 export default function Home() {
   AdoptionData;
   return (
-    <div className="h-screen p-8">
-      <div className="grid grid-cols-2 gap-4 h-full">
-        <div className="border-2 rounded-2xl">
-          {AdoptionData.map(({ id, picture, name, age, description }) => {
-            return (
-              <AdoptionCard
-                key={id}
-                id={id}
-                picture={picture}
-                name={name}
-                age={age}
-                description={description}
-              />
-            );
-          })}
-        </div>
-        <div className="grid grid-rows-2 gap-4 h-full">
-          <div className="border-2 rounded-2xl">2</div>
-          <div className="border-2 rounded-2xl">3</div>
+    <div className="h-full bg-red-50">
+      <div className="h-full p-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 h-full">
+          {AdoptionData.map(
+            ({ id, picture, name, raza, asociacion, tamaño }) => {
+              return (
+                <AdoptionCard
+                  key={id}
+                  id={id}
+                  picture={picture}
+                  name={name}
+                  raza={raza}
+                  asociacion={asociacion}
+                  tamaño={tamaño}
+                />
+              );
+            },
+          )}
         </div>
       </div>
     </div>
