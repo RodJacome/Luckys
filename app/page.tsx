@@ -6,7 +6,7 @@ import { NavBar } from "./components/navBar/navBar";
 export default function Home() {
   AdoptionData;
   return (
-    <div className="h-full bg-red-50">
+    <div className="h-full font-mono bg-gray-100">
       <div className="h-full p-10">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 h-full">
           {AdoptionData.map(
