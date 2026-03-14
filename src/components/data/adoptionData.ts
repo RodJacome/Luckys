@@ -1,4 +1,6 @@
-export const AdoptionData = [
+import { AdoptionType } from "../types/commonTypes";
+
+export const AdoptionData: AdoptionType[] = [
   {
     id: "1",
     picture: "/common/animals/dogs/peluchin.jpeg",
@@ -6,6 +8,8 @@ export const AdoptionData = [
     raza: "Cruzado",
     tamaño: "Mediano",
     asociacion: "Arani",
+    status: "adopcion",
+    location: "San Salvador",
   },
   {
     id: "2",
@@ -14,6 +18,8 @@ export const AdoptionData = [
     raza: "Cruzado",
     tamaño: "Mediano",
     asociacion: "Urban",
+    status: "adopcion",
+    location: "San Salvador",
   },
   {
     id: "3",
@@ -22,6 +28,8 @@ export const AdoptionData = [
     raza: "Cruzado",
     tamaño: "Mediano",
     asociacion: "Urban",
+    status: "adopcion",
+    location: "San Salvador",
   },
   {
     id: "4",
@@ -30,6 +38,8 @@ export const AdoptionData = [
     raza: "Cruzado",
     tamaño: "Mediano",
     asociacion: "Urban",
+    status: "adopcion",
+    location: "San Salvador",
   },
   {
     id: "5",
@@ -38,6 +48,8 @@ export const AdoptionData = [
     raza: "Cruzado",
     tamaño: "Mediano",
     asociacion: "Urban",
+    status: "espera",
+    location: "San Salvador",
   },
   {
     id: "6",
@@ -46,6 +58,8 @@ export const AdoptionData = [
     raza: "Cruzado",
     tamaño: "Mediano",
     asociacion: "Urban",
+    status: "espera",
+    location: "San Salvador",
   },
   {
     id: "7",
@@ -54,6 +68,8 @@ export const AdoptionData = [
     raza: "Cruzado",
     tamaño: "Mediano",
     asociacion: "Urban",
+    status: "espera",
+    location: "San Salvador",
   },
   {
     id: "8",
@@ -61,6 +77,7 @@ export const AdoptionData = [
     name: "Virolo",
     raza: "Cruzado",
     tamaño: "Mediano",
-    asociacion: "Urban",
+    status: "adoptado",
+    location: "San Salvador",
   },
 ];
