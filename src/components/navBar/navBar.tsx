@@ -1,7 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Briefcase, Users, HeartHandshake, Phone, LogIn } from "lucide-react";
+import {
+  Briefcase,
+  Users,
+  HeartHandshake,
+  Phone,
+  LogIn,
+  DogIcon,
+} from "lucide-react";
 
 export const NavBar = () => {
   return (
@@ -14,7 +21,7 @@ export const NavBar = () => {
         </Link>
         <div>
           {/* Menu */}
-          <div className="hidden md:flex items-center justify-between gap-12 text-gray-700">
+          <div className="hidden md:flex items-center justify-between gap-24 text-gray-700">
             <Link
               href="/trabajo"
               className="flex items-center gap-2 hover:text-emerald-600 transition"
@@ -45,6 +52,13 @@ export const NavBar = () => {
             >
               <Phone size={18} />
               Contactos
+            </Link>
+            <Link
+              href="/adoption"
+              className="flex items-center gap-2 hover:text-emerald-600 transition"
+            >
+              <DogIcon size={18} />
+              Adopta
             </Link>
           </div>
         </div>

@@ -10,3 +10,11 @@ export type AdoptionType = {
   status: AdoptionStatus;
   location: string;
 };
+
+export type CarouselType = {
+  id: string;
+  picture: string;
+  title: string;
+  description: string;
+  url: string;
+};
