@@ -18,7 +18,7 @@ export const HeroSeccion = () => {
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-start ml-32">
         <div className="text-white flex-row justify-center items-center space-y-3">
-          <h1 className="text-5xl font-semibold text-start">
+          <h1 className="text-5xl font-thin text-start">
             Ayuda a cambiar <br />
             la vida de un perrito
           </h1>
@@ -39,7 +39,7 @@ export const HeroSeccion = () => {
             historia, ofreciendo una segunda oportunidad a cientos de perros que
             aún esperan un hogar.
           </p>
-          <button className="flex flex-col items-center justify-center text-white bg-orange-500 w-36 h-36 rounded-full hover:bg-orange-600 transition">
+          <button className="flex flex-col items-center justify-center text-white bg-orange-500 w-36 h-36 rounded-full hover:bg-orange-600 transition delay-150 duration-300 ease-in-out hover:scale-110">
             <span className="text-xl">Leer más</span>
           </button>
         </div>
