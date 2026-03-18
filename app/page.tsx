@@ -8,7 +8,7 @@ import { CarouselData } from "@/src/components/data/carouselData";
 
 export default function Home() {
   return (
-    <div className="h-full font-mono bg-stone-50">
+    <div className="h-full bg-stone-50">
       <NavBar />
       <HeroSeccion />
       <Carousel />;
