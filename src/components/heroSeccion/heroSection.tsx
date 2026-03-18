@@ -16,9 +16,9 @@ export const HeroSeccion = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center justify-start ml-32">
+      <div className="relative z-10 h-full flex items-center justify-start p-6 sm:p-0 sm:ml-32">
         <div className="text-white flex-row justify-center items-center space-y-3">
-          <h1 className="text-5xl font-thin text-start">
+          <h1 className="text-5xl font-thin text-start mt-10 sm:pt-0">
             Ayuda a cambiar <br />
             la vida de un perrito
           </h1>
@@ -27,7 +27,7 @@ export const HeroSeccion = () => {
             <br />
             calles, enfrentando hambre, enfermedades y peligro constante.
           </p>
-          <p className="text-lg">
+          <p className="text-lg hidden sm:flex">
             Afortunadamente, cada vez más personas están tomando conciencia
             <br />
             sobre el bienestar animal y la importancia de actuar frente a esta
@@ -39,7 +39,7 @@ export const HeroSeccion = () => {
             historia, ofreciendo una segunda oportunidad a cientos de perros que
             aún esperan un hogar.
           </p>
-          <button className="flex flex-col items-center justify-center text-white bg-orange-500 w-36 h-36 rounded-full hover:bg-orange-600 transition delay-150 duration-300 ease-in-out hover:scale-110">
+          <button className="flex flex-col items-center justify-center text-white bg-orange-500 py-2 px-4 rounded-lg sm:w-36 sm:h-36 sm:rounded-full hover:bg-orange-600 transition delay-150 duration-300 ease-in-out hover:scale-110">
             <span className="text-xl">Leer más</span>
           </button>
         </div>
