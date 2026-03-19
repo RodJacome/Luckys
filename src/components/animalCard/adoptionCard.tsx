@@ -11,6 +11,8 @@ export const AdoptionCard = ({
   tamaño,
   status,
   location,
+  genero,
+  edad,
 }: AdoptionType) => {
   return (
     <div
