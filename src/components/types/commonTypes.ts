@@ -1,7 +1,11 @@
 export type AdoptionStatus = "adopcion" | "espera" | "adoptado";
 export type GenderType = "macho" | "hembra";
 export type AgeType = "0-6meses" | "6meses-1año" | "1año-5años" | "+5años";
-export type SizeType = "pequeño" | "mediano" | "grande";
+export type SizeType = "mini" | "pequeño" | "mediano" | "grande";
+export type AsociationType =
+  | "arani"
+  | "urban dog santuary"
+  | "fundacion huellitas";
 
 export type AdoptionType = {
   id: string;
@@ -9,7 +13,7 @@ export type AdoptionType = {
   name: string;
   raza: string;
   tamaño: SizeType;
-  asociacion?: string;
+  asociacion?: AsociationType;
   status: AdoptionStatus;
   location: string;
   genero: GenderType;
@@ -25,6 +29,22 @@ export type CarouselType = {
   url: string;
 };
 
+export const generoOptions: GenderType[] = ["macho", "hembra"];
+
+export const edadOptions: AgeType[] = [
+  "0-6meses",
+  "6meses-1año",
+  "1año-5años",
+  "+5años",
+];
+export const tamañoOptions: SizeType[] = [
+  "mini",
+  "pequeño",
+  "mediano",
+  "grande",
+];
+
+// Filtros
 export type FilterCategory = "genero" | "edad" | "tamaño" | "location";
 
 export type FilterGroupType<T> = {

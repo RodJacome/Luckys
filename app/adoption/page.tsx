@@ -3,12 +3,16 @@
 import { AdoptionCard } from "@/src/components/animalCard/adoptionCard";
 import { FilterGroup } from "@/src/components/common/filterGroup";
 import { AdoptionData } from "@/src/components/data/adoptionData";
-import { NavBar } from "@/src/components/navBar/navBar";
+import { AdoptionForm } from "@/src/components/forms/adoptionForms";
+import { Modal } from "@/src/components/modal/modal";
 import {
   AgeType,
+  edadOptions,
   FiltersType,
   GenderType,
+  generoOptions,
   SizeType,
+  tamañoOptions,
 } from "@/src/components/types/commonTypes";
 import { useState } from "react";
 
@@ -19,16 +23,6 @@ export default function AdoptionPage() {
     tamaño: [],
     location: [],
   });
-
-  const generoOptions: GenderType[] = ["macho", "hembra"];
-
-  const edadOptions: AgeType[] = [
-    "0-6meses",
-    "6meses-1año",
-    "1año-5años",
-    "+5años",
-  ];
-  const tamañoOptions: SizeType[] = ["pequeño", "mediano", "grande"];
 
   const handleCheckbox = <T extends string>(
     category: keyof FiltersType,
@@ -55,9 +49,13 @@ export default function AdoptionPage() {
     );
   });
 
+  /// Implementacion de agregar Cards
+  const [openForm, setOpenForm] = useState(false);
+
+  const [animals, setAnimals] = useState(AdoptionData);
+
   return (
     <>
-      <NavBar />
       <div className="w-full px-10 pt-4">
         <div className="sm:grid sm:grid-cols-5">
           <FilterGroup
@@ -83,6 +81,21 @@ export default function AdoptionPage() {
         </div>
       </div>
 
+      <button
+        onClick={() => setOpenForm(true)}
+        className="bg-emerald-500 text-white mx-10 px-4 py-2 rounded-lg hover:bg-emerald-600 transition"
+      >
+        + Agregar adopción
+      </button>
+      <Modal isOpen={openForm} onClose={() => setOpenForm(false)}>
+        <AdoptionForm
+          onSubmit={(data) => {
+            setAnimals((prev) => [...prev, data]);
+            setOpenForm(false);
+          }}
+          onCancel={() => setOpenForm(false)}
+        />
+      </Modal>
       <div className="p-10">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-4 h-full">
           {filteredAnimals.map((animal) => {
