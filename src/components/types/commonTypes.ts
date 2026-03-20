@@ -37,3 +37,10 @@ export type FilterGroupType<T> = {
     checked: boolean,
   ) => void;
 };
+
+export type FiltersType = {
+  genero: GenderType[];
+  edad: AgeType[];
+  tamaño: SizeType[];
+  location: string[];
+};

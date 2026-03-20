@@ -6,19 +6,13 @@ import { AdoptionData } from "@/src/components/data/adoptionData";
 import { NavBar } from "@/src/components/navBar/navBar";
 import {
   AgeType,
+  FiltersType,
   GenderType,
   SizeType,
 } from "@/src/components/types/commonTypes";
 import { useState } from "react";
 
 export default function AdoptionPage() {
-  type FiltersType = {
-    genero: GenderType[];
-    edad: AgeType[];
-    tamaño: SizeType[];
-    location: string[];
-  };
-
   const [filters, setFilters] = useState<FiltersType>({
     genero: [],
     edad: [],
