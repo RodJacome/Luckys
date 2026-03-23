@@ -50,7 +50,7 @@ export const AdoptionForm = ({ onSubmit, onCancel }: Props) => {
       <h2 className="text-xl font-bold">Agregar adopción</h2>
 
       {/* Imagen */}
-      <label className="w-full h- border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:border-emerald-500 transition overflow-hidden">
+      <label className="w-full border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:border-emerald-500 transition overflow-hidden">
         <input
           type="file"
           accept="image/*"
@@ -59,11 +59,13 @@ export const AdoptionForm = ({ onSubmit, onCancel }: Props) => {
         />
 
         {preview ? (
-          <img
-            src={preview}
-            alt="preview"
-            className="w-full h-full object-cover"
-          />
+          <div className="w-full h-80 bg-gray-100 flex items-center justify-center rounded">
+            <img
+              src={preview}
+              alt="preview"
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
         ) : (
           <div className="flex flex-col items-center text-gray-500">
             <UploadCloud size={40} />
