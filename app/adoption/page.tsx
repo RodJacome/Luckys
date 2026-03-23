@@ -6,12 +6,9 @@ import { AdoptionData } from "@/src/components/data/adoptionData";
 import { AdoptionForm } from "@/src/components/forms/adoptionForms";
 import { Modal } from "@/src/components/modal/modal";
 import {
-  AgeType,
   edadOptions,
   FiltersType,
-  GenderType,
   generoOptions,
-  SizeType,
   tamañoOptions,
 } from "@/src/components/types/commonTypes";
 import { useState } from "react";

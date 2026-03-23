@@ -1,11 +1,8 @@
 export type AdoptionStatus = "adopcion" | "espera" | "adoptado";
-export type GenderType = "macho" | "hembra";
-export type AgeType = "0-6meses" | "6meses-1año" | "1año-5años" | "+5años";
-export type SizeType = "mini" | "pequeño" | "mediano" | "grande";
-export type AsociationType =
-  | "arani"
-  | "urban dog santuary"
-  | "fundacion huellitas";
+export type GenderType = (typeof generoOptions)[number];
+export type AgeType = (typeof edadOptions)[number];
+export type SizeType = (typeof tamañoOptions)[number];
+export type AssociationType = (typeof associationOptions)[number];
 
 export type AdoptionType = {
   id: string;
@@ -13,7 +10,7 @@ export type AdoptionType = {
   name: string;
   raza: string;
   tamaño: SizeType;
-  asociacion?: AsociationType;
+  asociacion?: AssociationType;
   status: AdoptionStatus;
   location: string;
   genero: GenderType;
@@ -29,27 +26,29 @@ export type CarouselType = {
   url: string;
 };
 
-export const generoOptions: GenderType[] = ["macho", "hembra"];
+export const generoOptions = ["macho", "hembra"] as const;
 
-export const edadOptions: AgeType[] = [
+export const edadOptions = [
   "0-6meses",
   "6meses-1año",
   "1año-5años",
   "+5años",
-];
-export const tamañoOptions: SizeType[] = [
-  "mini",
-  "pequeño",
-  "mediano",
-  "grande",
-];
+] as const;
+
+export const tamañoOptions = ["mini", "pequeño", "mediano", "grande"] as const;
 
 // Filtros
 export type FilterCategory = "genero" | "edad" | "tamaño" | "location";
 
+export const associationOptions = [
+  "arani",
+  "urban dog santuary",
+  "fundacion huellitas",
+] as const;
+
 export type FilterGroupType<T> = {
   title: string;
-  options: T[];
+  options: readonly T[];
   category: FilterCategory;
   handleCheckbox: (
     category: FilterCategory,
